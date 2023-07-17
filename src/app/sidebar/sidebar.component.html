@@ -1,0 +1,28 @@
+<mat-sidenav-container class="container">
+    <mat-sidenav mode="side" opened class="sidenav">
+        <mat-nav-list>
+
+            <div class="menu-option">
+                <a mat-list-item routerLink="/menu">
+                    <mat-icon>home</mat-icon>
+                    <span>Menu</span>
+                </a>
+            </div>
+            <div class="menu-option">
+                <a mat-list-item routerLink="/content-management">
+                    <mat-icon>dashboard</mat-icon>
+                    <span>Content Management</span>
+                </a>
+            </div>
+            <div class="menu-option">
+                <a mat-list-item routerLink="/courses">
+                    <mat-icon>school</mat-icon>
+                    <span>Courses</span>
+                </a>
+            </div>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
