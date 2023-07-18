@@ -30,10 +30,6 @@ export class MenuComponent implements OnInit {
   }
 
   applyFilter(): void {
-      this.searchBooks();
-  }
-  
-  searchBooks(): void {
     this.books$ = this.menuService.getMenuData().pipe(
       map((books: Book[]) => {
         return books.filter(book =>
