@@ -1,26 +1,28 @@
 <mat-sidenav-container class="container">
     <mat-sidenav mode="side" opened="true" disableClose (keydown.escape)="toggleMenu()" class="sidenav">
-        <button class="toggle_side_nav" (click)="toggleMenu()" matTooltip="{{ isMenuExpanded ? 'Hide Menu' : 'Show Menu' }}">
+        <button class="toggle_side_nav" (click)="toggleMenu()"
+            matTooltip="{{ isMenuExpanded ? 'Hide Menu' : 'Show Menu' }}">
             <mat-icon>{{ isMenuExpanded ? 'arrow_back_ios_new' : 'arrow_forward_ios_new' }}</mat-icon>
         </button>
         <mat-nav-list>
 
             <div class="menu-option">
                 <a mat-list-item routerLink="/menu">
-                    <img src ="../../../assets/images/menu_icon.png" alt ="Menu Icon" class="menu-icon">
+                    <img src="../../../assets/images/menu_icon.png" alt="Menu Icon" class="menu-icon">
                     <span>MENU</span>
                 </a>
             </div>
             <div class="menu-option">
-                <a mat-list-item routerLink="/content-management">
-                    <img src ="../../../assets/images/content-management_icon.png" alt ="content-management Icon" class="menu-icon">
+                <a mat-list-item routerLink="/content">
+                    <img src="../../../assets/images/content-management_icon.png" alt="content-management Icon"
+                        class="menu-icon">
                     <span>CONTENT MANAGEMENT</span>
                     <mat-icon>keyboard_arrow_down</mat-icon>
                 </a>
             </div>
             <div class="menu-option">
                 <a mat-list-item routerLink="/courses">
-                    <img src ="../../../assets/images/courses_icon.png" alt ="Courses Icon" class="menu-icon">
+                    <img src="../../../assets/images/courses_icon.png" alt="Courses Icon" class="menu-icon">
                     <span>COURSES</span>
                 </a>
             </div>

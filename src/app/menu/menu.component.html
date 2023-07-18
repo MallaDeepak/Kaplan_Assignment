@@ -1,32 +1,28 @@
-  <div class="mat-toolbar-row">
-      <img src="../../../assets/images/atom.png" alt="Company Logo" class="logo-image">
-  </div>
-  <div class="side-header">
+<div class="mat-toolbar-row">
+    <img src="../../../assets/images/atom.png" alt="Company Logo" class="logo-image">
+</div>
+<div class="side-header">
     <h1 class="create-header">Books</h1>
     <button mat-raised-button color="primary" class="create-button">Create New Book</button>
-  </div>
-  <div class="row">
+</div>
+<div class="row">
     <mat-form-field class="search-container">
-      <mat-icon class="search-icon" matPrefix>search</mat-icon>
-      <input matInput placeholder="Search">
+        <mat-icon class="search-icon" matPrefix>search</mat-icon>
+        <input matInput placeholder="Search">
     </mat-form-field>
-  </div>
-  <div><h2>All Books</h2></div>
-  <div class="book-grid">
+</div>
+<div>
+    <h2>All Books</h2>
+</div>
+<div class="book-grid">
     <mat-card *ngFor="let book of books" class="book-card">
         <mat-card-content class="book-margin">
-          <mat-card-title>{{ book.title }}</mat-card-title>
-          <p>Author: {{ book.authors }}</p>
-          <p>Publisher: {{ book.publisher }}</p>
-          <p>Publisher Date: {{ book.publishedDate }}</p>
+            <mat-card-title>{{ book.title }}</mat-card-title>
+            <p>Author: {{ book.authors }}</p>
+            <p>Publisher: {{ book.publisher }}</p>
+            <p>Publisher Date: {{ book.publishedDate }}</p>
         </mat-card-content>
-      </mat-card>  
-        
+    </mat-card>
+
     <router-outlet></router-outlet>
-  </div>
-  
- 
-  
-  
-  
-  
+</div>
