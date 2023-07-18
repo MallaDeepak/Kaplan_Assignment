@@ -132,9 +132,11 @@
 }
 
 .sub-heading {
-    color: #292929 !important;
+    color: #303965 !important;
+    font-weight: 30px;
 }
 
 .sub-title {
-    color: #474747 !important;
+    color: #303965 !important;
+    font-size: 19px !important;
 }
