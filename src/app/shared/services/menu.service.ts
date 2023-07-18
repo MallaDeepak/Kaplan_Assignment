@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { Book } from '../menu/book.model';
+import { catchError, map } from 'rxjs/operators';
+import { Book } from '../interfaces/book.model';
+import { throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -29,6 +30,11 @@ export class MenuService {
           }
         }
         return books;
+      }),
+      catchError((error: any) => {
+        // Handle the error and return an observable with the error message
+        console.error('Error occurred while fetching menu data:', error);
+        return throwError('Error occurred while fetching menu data. Please try again later.');
       })
     );
   }

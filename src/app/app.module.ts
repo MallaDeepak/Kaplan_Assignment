@@ -16,6 +16,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
+import { MatTooltipModule } from '@angular/material/tooltip';
+
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatListModule,
     MatIconModule,
     HttpClientModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,20 +1,14 @@
-<!-- <mat-toolbar>
-    <mat-toolbar-row>
-      <img src="../../../assets/images/atom.png" alt="Company Logo" class="logo">
-    </mat-toolbar-row>
-  </mat-toolbar> -->
-  <mat-toolbar color="primary">
-    <img src="../../../assets/images/atom.png" alt="Company Logo" class="logo">
-    <span class="company-name">Company Name</span>
-  </mat-toolbar>
+  <div class="mat-toolbar-row">
+      <img src="../../../assets/images/atom.png" alt="Company Logo" class="logo-image">
+  </div>
   <div class="side-header">
-    <h2>Books</h2>
+    <h1 class="create-header">Books</h1>
     <button mat-raised-button color="primary" class="create-button">Create New Book</button>
   </div>
-  <div class="search-container">
-    <i class="material-icons search-icon">search</i>
-    <mat-form-field>
-      <input matInput type="text" placeholder="Search">
+  <div class="row">
+    <mat-form-field class="search-container">
+      <mat-icon class="search-icon" matPrefix>search</mat-icon>
+      <input matInput placeholder="Search">
     </mat-form-field>
   </div>
   <div><h2>All Books</h2></div>
@@ -30,6 +24,7 @@
         
     <router-outlet></router-outlet>
   </div>
+  
  
   
   
