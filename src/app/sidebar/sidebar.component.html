@@ -22,13 +22,17 @@
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content class="content">
-        <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
     </mat-sidenav-content>
 </mat-sidenav-container>
 
 <ng-template #menuItemTemplate let-menuItem="menuItem" let-isChild="isChild">
-    <a *ngIf="menuItem.isVisible" [ngClass]="{ 'is-child': isChild }" mat-list-item [routerLink]="menuItem.viewLink"
-        routerLinkActive="active" matTooltip="{{ isMenuExpanded ? '' : menuItem.title }}" matTooltipPosition="right">
+    <a *ngIf="menuItem.isVisible" 
+        [ngClass]="{ 'is-child': isChild }" 
+        mat-list-item [routerLink]="menuItem.viewLink"
+        routerLinkActive="active" 
+        matTooltip="{{ isMenuExpanded ? '' : menuItem.title }}" 
+        matTooltipPosition="right">
         <img *ngIf="menuItem.image" [src]="menuItem.image" alt="{{ menuItem.title }}" class="custom-icon">
         <span mat-line *ngIf="isMenuExpanded">{{ menuItem.title }}</span>
     </a>
