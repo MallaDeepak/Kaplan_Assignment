@@ -1,0 +1,9 @@
+:host {
+    display: flex;
+    height: 100vh;
+  }
+  
+  router-outlet {
+    flex: 1;
+  }
+  

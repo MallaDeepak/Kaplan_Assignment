@@ -3,11 +3,6 @@
     font-family: sans-serif;
 }
 
-.sidenav {
-    width: 300px;
-    font-size: 18px;
-}
-
 .content {
     padding: 20px;
 }
@@ -47,3 +42,30 @@
 .sidemenu-text{
     color:#c0baba;
 }
+
+
+.container {
+    height: 100%;
+  }
+  
+  .toggle-button {
+    position: absolute;
+    right: 16px;
+    bottom: 20px;
+    background-color: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .active {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .custom-icon {
+    width: 24px;
+    height: 24px;
+    /* Additional styling as needed */
+  }
+  
+  
