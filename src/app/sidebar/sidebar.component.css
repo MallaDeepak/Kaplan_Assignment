@@ -67,5 +67,10 @@
     height: 24px;
     /* Additional styling as needed */
   }
-  
+
+  .sidebar-title {
+    color: #888585 !important;
+    font-size: 14px;
+    padding-left: 8px;
+  }
   
