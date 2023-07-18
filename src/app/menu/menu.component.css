@@ -26,11 +26,13 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-color: white !important;
+    /* background-color: white !important; */
 }
 
 .create-button {
     margin-left: 10px;
+    background-color: #1134A6;
+    color: white;
 }
 
 .content {
@@ -39,9 +41,10 @@
 
 .search-container {
     align-items: center;
-    margin-top: 20px;
+    margin-top: 10px;
     width: 50%;
-    padding-bottom: 4px;
+    padding-bottom: 8px !important;
+    font-size: large;
 }
 
 .search-icon {
@@ -56,11 +59,12 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    font-family: sans-serif;
 }
 
 .book-card {
     flex-basis: calc(50% - 30px);
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     padding: 4px;
     border-left: 5px solid orange;
 }
@@ -84,6 +88,7 @@
 
 .book-margin {
     padding: 16px;
+    color: #808080;
 }
 
 .mat-body p {
@@ -124,4 +129,12 @@
 
 .search-icon {
     padding: 2px !important;
+}
+
+.sub-heading {
+    color: #292929 !important;
+}
+
+.sub-title {
+    color: #474747 !important;
 }

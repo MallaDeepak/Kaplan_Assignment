@@ -3,26 +3,32 @@
 </div>
 <div class="side-header">
     <h1 class="create-header">Books</h1>
-    <button mat-raised-button color="primary" class="create-button">Create New Book</button>
+    <button mat-raised-button color="primary" class="create-button" (click)="createNewBook()">Create New Book</button>
 </div>
 <div class="row">
     <mat-form-field class="search-container">
         <mat-icon class="search-icon" matPrefix>search</mat-icon>
-        <input matInput placeholder="Search">
+        <input matInput [(ngModel)]="searchKey" placeholder="Search" (input)="applyFilter()">
     </mat-form-field>
 </div>
 <div>
-    <h2>All Books</h2>
+    <h2 class="sub-heading">All Books</h2>
 </div>
-<div class="book-grid">
-    <mat-card *ngFor="let book of books" class="book-card">
-        <mat-card-content class="book-margin">
-            <mat-card-title>{{ book.title }}</mat-card-title>
-            <p>Author: {{ book.authors }}</p>
-            <p>Publisher: {{ book.publisher }}</p>
-            <p>Publisher Date: {{ book.publishedDate }}</p>
-        </mat-card-content>
-    </mat-card>
+<ng-container *ngIf="books$ | async as books; else loading">
+    <div class="book-grid">
+        <mat-card *ngFor="let book of books" class="book-card">
+            <mat-card-content class="book-margin">
+                <mat-card-title class="sub-title">{{ book.title }}</mat-card-title>
+                <p>Authors: {{ book.authors }}</p>
+                <p>Publisher: {{ book.publisher }}</p>
+                <p>Publisher Date: {{ book.publishedDate }}</p>
+            </mat-card-content>
+        </mat-card>
 
-    <router-outlet></router-outlet>
-</div>
+        <router-outlet></router-outlet>
+    </div>
+</ng-container>
+
+<ng-template #loading>
+    <p>Loading books...</p>
+</ng-template>

@@ -1,5 +1,6 @@
 .container {
     height: 100vh;
+    font-family: sans-serif;
 }
 
 .sidenav {
@@ -42,4 +43,7 @@
     background-color: transparent;
     border: none;
 
+}
+.sidemenu-text{
+    color:#c0baba;
 }
