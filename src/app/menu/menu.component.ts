@@ -30,11 +30,7 @@ export class MenuComponent implements OnInit {
   }
 
   applyFilter(): void {
-    if (this.searchKey && this.searchKey.length > 2) {
       this.searchBooks();
-    } else {
-      this.fetchBooks();
-    }
   }
   
   searchBooks(): void {
