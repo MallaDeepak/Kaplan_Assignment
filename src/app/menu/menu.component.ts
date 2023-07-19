@@ -50,7 +50,7 @@ export class MenuComponent implements OnInit {
           authors: ['Custom Author'],
           publisher: 'Custom Publisher',
           title: 'Custom Book',
-          publishedDate: '2022-01-01'
+          publishedDate: '2023-07-19'
         };  
         return [...books, customBook];
       }),

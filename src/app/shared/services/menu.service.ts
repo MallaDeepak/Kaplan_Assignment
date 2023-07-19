@@ -32,15 +32,5 @@ export class MenuService {
       })
     );
   }
-
-  // pushBookData(newBook: Book): Observable<any> {
-  
-  //   return this.http.post(this.apiUrl, newBook).pipe(
-  //     catchError((error: any) => {
-  //       console.error('Error pushing new book data:', error);
-  //       throw new Error('Error pushing new book data. Please try again later.');
-  //     })
-  //   );
-  // }
   
 }

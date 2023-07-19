@@ -3,6 +3,7 @@ import { SidebarComponent } from './sidebar.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { RouterTestingModule } from '@angular/router/testing';
 import { By } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('SidebarComponent', () => {
   let component: SidebarComponent;
@@ -13,7 +14,8 @@ describe('SidebarComponent', () => {
       declarations: [ SidebarComponent ],
       imports: [
         MatSidenavModule,
-        RouterTestingModule
+        RouterTestingModule,
+        BrowserAnimationsModule
       ]
     })
     .compileComponents();
@@ -28,14 +30,27 @@ describe('SidebarComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should open the respective component when the menu is clicked', () => {
-    const menuButton = fixture.debugElement.query(By.css('.menu-button'));
-    menuButton.nativeElement.click();
+  it('should have initial value of isMenuExpanded set to true', () => {
+    expect(component.isMenuExpanded).toBe(true);
+  });
+
+  it('should toggle isMenuExpanded when toggleMenu is called', () => {
+    // Initially, isMenuExpanded is true
+    expect(component.isMenuExpanded).toBe(true);
+
+    // Call the method to toggle isMenuExpanded
+    component.toggleMenu();
     fixture.detectChanges();
-  
-    // Assert that the respective component is open or navigate to the correct URL
-    // You can use additional matchers and assertions based on your specific requirements
-    // For example, you can use the RouterTestingModule to navigate and test the URL
+
+    // After the method call, isMenuExpanded should be false
+    expect(component.isMenuExpanded).toBe(false);
+
+    // Call the method again to toggle isMenuExpanded
+    component.toggleMenu();
+    fixture.detectChanges();
+
+    // After the method call, isMenuExpanded should be true again
+    expect(component.isMenuExpanded).toBe(true);
   });
 
 });
