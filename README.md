@@ -21,6 +21,12 @@ Title: Books List (demonstrate knowledge of consuming apis , unit/integration te
     Common commands include npm start, ng serve, or yarn start.
     Run the following command in the terminal to run the project: ```ng serve```
 
+4. Run the TestCases:
+
+    Open a terminal or command prompt.
+    Navigate to the project's root directory.
+    Run the following command in the terminal : ```ng test```
+
 
 
 # BooksList
